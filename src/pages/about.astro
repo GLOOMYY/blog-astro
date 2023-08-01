@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css';
+
 const pageTitle = "Sobre mi";
 const identity = {
   nombre: "Sebastian",
@@ -7,6 +9,11 @@ const identity = {
 };
 
 const skills = ["HTML", "CSS", "Javascript", "Python", "Pandas", "TensorFlow", "Scikit-learn", "Django", "FastAPI"];
+
+const feliz = true;
+const terminado = false;
+
+const colorSkill = "gold";
 ---
 
 <html lang="en">
@@ -17,6 +24,18 @@ const skills = ["HTML", "CSS", "Javascript", "Python", "Pandas", "TensorFlow", "
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{pageTitle}</title>
+    <style define:vars={{colorSkill}}>
+      h1 {
+        color: red;
+        font-size: 3em;
+      }
+
+      .skills {
+        color: var(--colorSkill);
+        font-weight: bold;
+      }
+
+    </style>
 
 	</head>
 	<body>
@@ -43,8 +62,12 @@ const skills = ["HTML", "CSS", "Javascript", "Python", "Pandas", "TensorFlow", "
 		
     <p>Mis habilidades son: </p>
     <ul>
-      {skills.map((skill) => <li>{skill}</li>)}
+      {skills.map((skill) => <li class="skills">{skill}</li>)}
     </ul>
+
+    {feliz && <p>Estoy Feliz</p>}
+
+    {terminado && <p>He terminado el blog</p>}
 
 	</body>
 </html>
