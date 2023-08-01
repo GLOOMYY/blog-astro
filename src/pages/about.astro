@@ -1,4 +1,12 @@
 ---
+const pageTitle = "Sobre mi";
+const identity = {
+  nombre: "Sebastian",
+  ciudad: "Medellin",
+  hobbies: ["Guitarra", "Programar", "Bicicleta"]
+};
+
+const skills = ["HTML", "CSS", "Javascript", "Python", "Pandas", "TensorFlow", "Scikit-learn", "Django", "FastAPI"];
 ---
 
 <html lang="en">
@@ -8,7 +16,7 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Sobre mi</title>
+		<title>{pageTitle}</title>
 
 	</head>
 	<body>
@@ -17,10 +25,26 @@
 		<a href="/about/">Sobre mi</a>
 		<a href="/blog/">Blog</a>
 
-		<h1>Astro</h1>
+		<h1>{pageTitle}</h1>
 		<h2>Sobre mi en astro</h2>
 
-    <p>Esta pagina es un ejemplo de astro</p>
+    <p>Estos son algonos datos sobre mi:</p>
+
+    <ul>
+      <li>Me llamo {identity.nombre}</li>
+      <li>Y soy de {identity.ciudad}</li>
+      <li> Y mis Hobbies son: 
+        <ul>
+          {identity.hobbies.map((hobbie) => <li>{hobbie}</li>)}
+        </ul>
+      </li>
+        
+    </ul>
 		
+    <p>Mis habilidades son: </p>
+    <ul>
+      {skills.map((skill) => <li>{skill}</li>)}
+    </ul>
+
 	</body>
 </html>
