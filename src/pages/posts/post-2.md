@@ -1,4 +1,6 @@
 ---
+layout: ../../layouts/MDPostLayout.astro
+
 title: 'Segundo Post'
 description: 'Segundo post del blog'
 author: 'GDE'
