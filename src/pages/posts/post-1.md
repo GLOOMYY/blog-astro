@@ -3,7 +3,7 @@ layout: ../../layouts/MDPostLayout.astro
 title: 'Primer Post'
 description: 'Primer post del blog'
 author: 'GDE'
-tags: ['astro','markdown']
+tags: ['astro','markdown','primero']
 ---
 
 

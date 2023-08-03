@@ -1,11 +1,11 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Felicitacion from '../components/Felicitacion.jsx';
 
-const platform = "github";
-const username = "GLOOMYY";
 const pageTitle = "Inicio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
 	<h2>Aprendiendo Astro</h2>
+	<Felicitacion client:load mensajes={['Gracias por asistir', 'Hola', 'Feliz Cumpleaños']}>
 </BaseLayout>

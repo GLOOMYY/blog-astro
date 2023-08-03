@@ -4,7 +4,7 @@ layout: ../../layouts/MDPostLayout.astro
 title: 'Segundo Post'
 description: 'Segundo post del blog'
 author: 'GDE'
-tags: ['astro','markdown']
+tags: ['astro','markdown', 'segundo']
 ---
 
 # Segundo Post
